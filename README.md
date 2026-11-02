@@ -105,6 +105,8 @@
 ```plaintext
 CS-Study/
 ├── .github/
+│   ├── workflows/
+│   │   └── auto-merge.yml            # 🤖 PR 자동 머지 GitHub Actions 봇
 │   └── pull_request_template.md      # PR 생성 템플릿
 ├── DataStructure/                    # 자료구조 발표 아카이빙
 │   ├── README.md                     # 자료구조 커리큘럼 및 체크리스트
@@ -122,12 +124,16 @@ CS-Study/
 
 ---
 
-## 🚀 Git & GitHub 협업 규칙
+## 🚀 Git & GitHub 협업 규칙 (Fork & PR 방식)
 
-### 1. Branch 전략
-- `main` 브랜치에 직접 커밋하지 않고, 개인 브랜치에서 작업 후 PR을 통해 병합합니다.
-- 브랜치 네이밍: `[카테고리]/[주제명]-[이름]`
-  - 예시: `network/tcp-udp-hong`, `datastructure/hash-table-kim`
+### 1. 작업 및 브랜치 흐름 (Fork Workflow)
+1. 본 메인 저장소(`upstream`)를 각자의 GitHub 계정으로 **Fork**합니다.
+2. Fork한 저장소를 로컬 PC로 `git clone` 합니다.
+3. 새로운 브랜치를 생성하여 작업합니다.
+   - 브랜치 네이밍: `[카테고리]/[주제명]-[이름]`
+   - 예시: `network/tcp-udp-hong`, `datastructure/hash-table-kim`
+4. 발표 자료 작성 후 Fork 저장소의 해당 브랜치로 `push` 합니다.
+5. 원본 저장소(`upstream`)의 `main` 브랜치로 **Pull Request(PR)**를 생성합니다.
 
 ### 2. 파일 명명 규칙
 - 각 카테고리 폴더 하위에 아래 형식으로 `.md` 파일을 생성합니다.
@@ -145,13 +151,13 @@ Angular / Gitmoji 컨벤션을 따릅니다.
 | `refactor` | 기존 정리 내용 보완/수정 | `refactor: B-Tree 설명 보완 - 김철수` |
 | `fix` | 오탈자 또는 잘못된 지식 수정 | `fix: OSI 7계층 오탈자 수정` |
 
-### 4. Pull Request 및 Review 규칙
+### 4. Pull Request & 자동 머지 봇 (Auto-Merge Bot 🤖)
 1. **PR 제목**: `[카테고리] 주제명 - 발표자 이름`
    - 예: `[Network] TCP 3-way & 4-way Handshake - 홍길동`
 2. **PR 내용**: [PR 템플릿](./.github/pull_request_template.md) 양식을 준수하여 작성
-3. **코드 리뷰 & Merge**:
-   - 오프라인 발표 전후로 최소 2명 이상의 스터디원이 리뷰 및 코멘트를 남깁니다.
-   - 피드백 반영 후 승인(Approve)을 받으면 발표자가 직접 `Merge`를 진행합니다.
+3. **자동 머지(Auto-Merge)**:
+   - PR이 열리면 GitHub Actions **Auto Merge Bot**이 안내 댓글을 남기고 충돌이 없을 시 `main` 브랜치로 **자동 머지**를 수행합니다.
+   - 발표 후 오프라인 카페 모임에서 나눈 질문/답변이나 피드백은 머지된 후에도 자유롭게 추가 커밋 및 코멘트로 남길 수 있습니다.
 
 ---
 

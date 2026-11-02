@@ -1,0 +1,72 @@
+name: Auto Merge PR Bot 🤖
+
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize]
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for GitHub mergeability check
+        run: sleep 3
+
+      - name: Auto Merge Pull Request
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const author = context.payload.pull_request.user.login;
+            const title = context.payload.pull_request.title;
+
+            console.log(`Processing PR #${prNumber} by @${author}: "${title}"`);
+
+            // 1. 환영 및 안내 코멘트 등록
+            try {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: `### 🤖 CS-Study Auto-Merge Bot\n\n` +
+                      `@${author} 님, CS 발표 정리 PR을 제출해주셔서 감사합니다! 🎉\n\n` +
+                      `- **제출 주제**: ${title}\n` +
+                      `- **상태**: 충돌(Conflict)이 없으면 잠시 후 \`main\` 브랜치에 자동으로 머지됩니다. ☕`
+              });
+            } catch (commentError) {
+              console.log('Comment failed:', commentError.message);
+            }
+
+            // 2. PR 머지 실행 (merge 방식으로 원본 커밋 히스토리 보존)
+            try {
+              const mergeResponse = await github.rest.pulls.merge({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: prNumber,
+                merge_method: 'merge', // 'merge' 또는 1개 커밋으로 합치려면 'squash'
+                commit_title: `docs: ${title} (#${prNumber})`,
+                commit_message: `Auto-merged PR #${prNumber} from @${author}`
+              });
+
+              console.log('Successfully merged:', mergeResponse.data.message);
+            } catch (error) {
+              console.error('Merge failed:', error.message);
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: `⚠️ **머지 실패 알림**\n\n` +
+                      `자동 머지 중 오류가 발생했습니다.\n` +
+                      `- 사유: \`${error.message}\`\n` +
+                      `- 충돌(Conflict)이 발생했거나 브랜치 보호 규칙을 확인해주세요.`
+              });
+              core.setFailed(error.message);
+            }
