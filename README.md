@@ -64,11 +64,11 @@
       </a>
     </td>
     <td align="center" width="120px">
-      <a href="https://github.com">
-        <img src="https://github.com/identicons/suyeon.png" width="80px" alt="조수연 프로필" style="border-radius: 50%;" /><br />
+      <a href="https://github.com/sue9585">
+        <img src="https://github.com/sue9585.png" width="80px" alt="조수연 프로필" style="border-radius: 50%;" /><br />
         <sub><b>조수연</b></sub>
       </a><br />
-      <a href="https://github.com">
+      <a href="https://github.com/sue9585">
         <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/>
       </a>
     </td>
