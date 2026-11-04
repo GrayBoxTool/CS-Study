@@ -1,7 +1,7 @@
 # 📑 TCP/IP 4계층 — 각 계층은 데이터 전달에서 무엇을 담당할까?
 
 > **발표자**: 최나현  
-> **날짜**: [발표일 입력]  
+> **날짜**: [2026.11.04.]  
 > **카테고리**: Network  
 > **참고 자료**: [RFC 1122 — 계층 구조](https://www.rfc-editor.org/rfc/rfc1122) · [RFC 9293 — TCP](https://www.rfc-editor.org/rfc/rfc9293.html) · [Bluetooth PAN](https://www.bluetooth.com/specifications/specs/personal-area-networking-profile-1-0/) · [Android 테더링](https://source.android.com/docs/core/ota/modular-system/tethering)
 
