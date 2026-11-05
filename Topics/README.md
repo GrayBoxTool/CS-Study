@@ -8,6 +8,7 @@
 - [네트워크 핵심 요약 및 질문 리스트](./Network-Curriculum.md)
 - [자료구조 핵심 요약 및 질문 리스트](./DataStructure-Curriculum.md)
 - [발표 정리용 공통 마크다운 템플릿](./template.md)
+- [예상 질문 Issue 템플릿](./expected-questions-issue-template.md)
 
 ---
 
@@ -16,17 +17,43 @@
 > **운영 팁**:
 > - 총 7명이므로, **화요일 3명 / 목요일 4명** (혹은 매회 3\~4명씩 순환) 발표를 진행하면 1주에 7명 전원이 1회씩 발표를 완료할 수 있습니다.
 > - 아래 스케줄은 **자료구조(DS)**와 **네트워크(NW)**를 병행하여 학습하는 4주 완성 로드맵 예시입니다.
+> - 실제 진행에 맞춰 1\~4회차는 날짜로 표기했습니다. 5회차부터는 회고에서 확정합니다.
 
-| 주차 | 회차 (요일) | 발표 주제 (DS / NW) | 권장 발표 인원 |
+| 주차 | 회차 (날짜) | 발표 주제 (DS / NW) | 진행 현황 |
 | :---: | :---: | :--- | :---: |
-| **1주차** | **1회차 (화)** | DS: Array vs LinkedList / Stack & Queue<br>NW: OSI 7 계층 & TCP/IP 4 계층 | 3명 |
-| | **2회차 (목)** | DS: Tree 기초 & Binary Search Tree<br>NW: TCP vs UDP / TCP Handshake | 4명 |
-| **2주차** | **3회차 (화)** | DS: Balanced Tree (AVL, Red-Black)<br>NW: TCP 제어 기법 (흐름/혼잡/오류) | 3명 |
-| | **4회차 (목)** | DS: Heap & Priority Queue / Hash Table<br>NW: HTTP vs HTTPS / SSL 핸드셰이크 | 4명 |
-| **3주차** | **5회차 (화)** | DS: Graph 기본 & DFS / BFS<br>NW: HTTP 1.1 vs 2.0 vs 3.0 | 3명 |
-| | **6회차 (목)** | DS: 최단 경로 알고리즘 / MST<br>NW: DNS 동작 원리 / 브라우저 주소창 입력 시 흐름 | 4명 |
-| **4주차** | **7회차 (화)** | DS: Trie 자료구조<br>NW: Cookie vs Session vs Web Storage | 3명 |
-| | **8회차 (목)** | DS: B-Tree & B+Tree<br>NW: REST API / CORS / Load Balancing | 4명 |
+| **1주차** | **1회차 (11/4 수)** | DS: Array vs LinkedList / Stack & Queue<br>NW: OSI 7 계층 & TCP/IP 4 계층 | ✅ 완료 |
+| | **2회차 (11/6 금)** | DS: Tree 기초 & Binary Search Tree (**예상 질문 Issue 기반 Q&A**)<br>NW: **네트워크 전체 흐름 개요** (최나현, 최승우 발표) | 🔜 예정 |
+| **2주차** | **3회차 (11/10 화)**<br>점심시간 · SSAFY 건물 내 | DS: Balanced Tree (AVL, Red-Black)<br>NW: TCP vs UDP / TCP Handshake *(2회차에서 이월)*, TCP 제어 기법 (흐름/혼잡/오류) | ⬜ |
+| | **4회차 (11/12 목)**<br>점심시간 · SSAFY 건물 내 | DS: Heap & Priority Queue / Hash Table<br>NW: HTTP vs HTTPS / SSL 핸드셰이크 | ⬜ |
+| **3주차** | **5회차** | DS: Graph 기본 & DFS / BFS<br>NW: HTTP 1.1 vs 2.0 vs 3.0 | ⬜ |
+| | **6회차** | DS: 최단 경로 알고리즘 / MST<br>NW: DNS 동작 원리 / 브라우저 주소창 입력 시 흐름 | ⬜ |
+| **4주차** | **7회차** | DS: Trie 자료구조<br>NW: Cookie vs Session vs Web Storage | ⬜ |
+| | **8회차** | DS: B-Tree & B+Tree<br>NW: REST API / CORS / Load Balancing | ⬜ |
+
+---
+
+## 📌 2회차 (11/6) 진행 안내
+
+### 🗂️ DS: Tree 기초 & BST — 예상 질문 Issue 작성
+- **대상**: 스터디원 전원 (7명)
+- **내용**: 토픽 2개(Tree·이진 트리 / BST)에 대해 **각자 질문 2개씩** 작성
+  - 면접 빈출 질문이어도 좋고, "이런 걸 물어볼 것 같다" 싶은 질문이어도 좋습니다.
+- **제출 방법**: GitHub **Issues** 탭 → New issue → [예상 질문 템플릿](./expected-questions-issue-template.md) 양식을 복사해 작성
+- **마감**: **11/6 13:30까지**
+
+### 🌐 NW: 네트워크 전체 흐름 발표
+- 정해진 토픽 목록(OSI, TCP/UDP 등)에 얽매이지 않고 **대략적인 네트워크 흐름**을 발표합니다.
+  (예: 요청이 클라이언트에서 서버까지 가는 큰 그림 — [Network-Curriculum 0번](./Network-Curriculum.md) 참고)
+- **발표자**: 최나현, 최승우
+- **발표 자료 제출**: **11/6 18:00까지** `Network/Day2(1106)/` 폴더에 PR
+
+### 🙋 역할 분담
+
+| 역할 | 담당 | 내용 |
+| :---: | :---: | :--- |
+| **발표** | 최나현, 최승우 | 네트워크 전체 흐름 발표, 발표 내용 PR (11/6 18:00까지) |
+| **서기** | 권혜강 | 모임 중 논의 / Q&A 기록 |
+| **청중 (질문·보충)** | 최묘석, 조수연, 김영웅, 윤형섭 | 네트워크 흐름과 앞으로 스터디할 내용의 대략적인 부분을 미리 공부해오고, 발표를 듣고 질문 및 보충 설명 |
 
 ---
 

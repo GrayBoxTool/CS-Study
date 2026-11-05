@@ -77,20 +77,46 @@
 
 ---
 
+## 📅 진행 현황 & 다음 일정
+
+| 회차 | 날짜 | 주제 | 상태 |
+| :---: | :---: | :--- | :---: |
+| 1회차 | 11/4 (수) | DS: Array vs LinkedList / Stack & Queue<br>NW: OSI 7 계층 & TCP/IP 4 계층 | ✅ 완료 |
+| 2회차 | 11/6 (금) | DS: Tree 기초 & BST (예상 질문 Q&A)<br>NW: 네트워크 전체 흐름 개요 | 🔜 예정 |
+| 3회차 | 11/10 (화) 점심시간 · SSAFY 건물 내 | DS: Balanced Tree (AVL, Red-Black)<br>NW: TCP vs UDP / TCP Handshake, TCP 제어 기법 | ⬜ |
+| 4회차 | 11/12 (목) 점심시간 · SSAFY 건물 내 | DS: Heap & Priority Queue / Hash Table<br>NW: HTTP vs HTTPS / SSL 핸드셰이크 | ⬜ |
+
+### 🔜 2회차 (11/6) 준비 사항
+
+| 구분 | 대상 | 할 일 | 마감 |
+| :---: | :---: | :--- | :---: |
+| **DS 예상 질문** | 전원 | 토픽 2개(Tree·이진 트리 / BST)에 대해 **각자 질문 2개씩** [Issue](../../issues/new/choose)에 작성 (면접 빈출 or 나올 것 같은 질문) | 11/6 13:30 |
+| **NW 발표** | 최나현, 최승우 | 토픽 목록 대신 **대략적인 네트워크 흐름** 발표, 발표 내용을 `Network/Day2(1106)/` 폴더에 PR | 11/6 18:00 |
+| **NW 청중** | 최묘석, 조수연, 김영웅, 윤형섭 | 네트워크 흐름 + 앞으로 스터디할 내용의 대략적인 부분 공부, 발표 후 질문 및 보충 | 모임 당일 |
+| **서기** | 권혜강 | 모임 기록 | 모임 당일 |
+
+> 🗒️ 질문 Issue 템플릿: [Topics/expected-questions-issue-template.md](./Topics/expected-questions-issue-template.md)  
+> 🗒️ 전체 스케줄과 역할 상세: [Topics/README.md](./Topics/README.md)
+
+---
+
 ## 🎯 스터디 운영 방식
 
 ### 1. 모임 일정 및 장소
-- **주기**: 주 2회 (예: 매주 화요일 / 목요일)
-- **시간**: 일과 종료 후 (18:10 \~ 19:30 투표로 세부 조정 가능)
-- **장소**: 근처 카페 (오프라인 모임)
+- **주기**: 주 2회 
+- **시간**: 일과 종료 후 (18:30 \~ 19:30 투표로 세부 조정 가능)
+- **장소**: 근처 카페 (오프라인 모임) / 점심 시간 이용해 회의실 이용
 - **진행 방식**:
   1. **사전 준비**: 모임 전날까지 본인 담당 주제 정리 마크다운 작성 후 PR 제출
+     - 회차별 마감이 따로 공지되면 공지된 시간(예: 2회차 11/6 18:00)을 따릅니다.
+     - 발표 외 주제는 **Issue**로 예상 질문을 모읍니다 (회차별 공지, 1인 2개).
   2. **오프라인 발표 (약 50\~60분)**:
      - 1인당 약 5\~10분 발표 + 5분 질의응답 (회당 3\~4명씩 순환 발표)
      - 다른 스터디원은 적극적으로 꼬리 질문 및 피드백 제시
   3. **회고 및 피드백 (약 10분)**:
      - 다음 회차 주제 확인 및 발표자 선정
      - PR 상호 코드 리뷰 및 승인(Approve) 후 Merge
+  4. **역할**: 발표자 / 청중(질문·보충) / **서기**(모임 기록, 현재 권혜강) — 회차별 공지에 따라 조정
 
 ### 2. 학습 로드맵
 - **1단계**: [자료구조 (Data Structure)](./DataStructure/) & [네트워크 (Network)](./Network/) 병행 학습
@@ -107,13 +133,17 @@ CS-Study/
 ├── .github/
 │   ├── workflows/
 │   │   └── auto-merge.yml            # 🤖 PR 자동 머지 GitHub Actions 봇
+│   ├── ISSUE_TEMPLATE/
+│   │   └── expected-questions.md     # 회차별 DS 예상 질문 Issue 템플릿
 │   └── pull_request_template.md      # PR 생성 템플릿
 ├── DataStructure/                    # 자료구조 발표 아카이빙
 │   ├── README.md                     # 자료구조 커리큘럼 및 체크리스트
-│   └── [주제명]_[이름].md              # 개인별 정리 문서
+│   └── Day[N](MMDD)/                 # 회차별 폴더 (예: Day1(1104))
+│       └── [주제명]_[이름].md          # 개인별 정리 문서
 ├── Network/                          # 네트워킹 발표 아카이빙
 │   ├── README.md                     # 네트워크 커리큘럼 및 체크리스트
-│   └── [주제명]_[이름].md              # 개인별 정리 문서
+│   └── Day[N](MMDD)/                 # 회차별 폴더 (예: Day2(1106))
+│       └── [주제명]_[이름].md          # 개인별 정리 문서
 ├── Topics/                           # 전체 학습 주제 요약 및 발표 템플릿
 │   ├── README.md                     # 토픽 한눈에 보기
 │   ├── DataStructure-Curriculum.md   # 자료구조 핵심 키워드/질문 리스트
@@ -136,10 +166,10 @@ CS-Study/
 5. 원본 저장소(`upstream`)의 `main` 브랜치로 **Pull Request(PR)**를 생성합니다.
 
 ### 2. 파일 명명 규칙
-- 각 카테고리 폴더 하위에 아래 형식으로 `.md` 파일을 생성합니다.
+- 각 카테고리 폴더 하위의 **회차 폴더(`Day[N](MMDD)`)** 안에 아래 형식으로 `.md` 파일을 생성합니다.
 - `[주제영문or한글]_[이름].md`
-  - 예: `Network/TCP_UDP_홍길동.md`
-  - 예: `DataStructure/Array_LinkedList_이순신.md`
+  - 예: `Network/Day2(1106)/네트워크_전체_흐름_홍길동.md`
+  - 예: `DataStructure/Day1(1104)/Array_LinkedList_이순신.md`
 
 ### 3. Commit Message 규칙
 Angular / Gitmoji 컨벤션을 따릅니다.
