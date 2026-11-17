@@ -9,24 +9,25 @@
 
 | 번호 | 주제 | 발표자 | 정리 문서 | 완료 여부 |
 | :---: | :--- | :---: | :---: | :---: |
-| 1 | OSI 7 계층 & TCP/IP 4 계층 모델 | - | [문서 링크]() | ⬜ |
-| 2 | TCP vs UDP 개념 및 특징 비교 | - | [문서 링크]() | ⬜ |
-| 3 | TCP 3-way Handshake & 4-way Handshake | - | [문서 링크]() | ⬜ |
-| 4 | TCP 흐름 제어, 혼잡 제어, 오류 제어 | - | [문서 링크]() | ⬜ |
-| 5 | HTTP vs HTTPS & SSL/TLS 핸드셰이크 | - | [문서 링크]() | ⬜ |
-| 6 | HTTP 버전별 진화 (HTTP 1.1 / 2.0 / 3.0 QUIC) | - | [문서 링크]() | ⬜ |
-| 7 | HTTP Status Code & HTTP Method (GET, POST 등) | - | [문서 링크]() | ⬜ |
-| 8 | DNS 동작 원리 & 작동 과정 | - | [문서 링크]() | ⬜ |
-| 9 | 웹 브라우저에 URL을 입력하면 일어나는 일 | - | [문서 링크]() | ⬜ |
-| 10 | Cookie vs Session vs Web Storage (Local/Session) | - | [문서 링크]() | ⬜ |
-| 11 | RESTful API 설계 원칙 및 특징 | - | [문서 링크]() | ⬜ |
-| 12 | CORS (교차 출처 리소스 공유) 원리와 해결법 | - | [문서 링크]() | ⬜ |
-| 13 | 로드 밸런서(Load Balancer)와 L4/L7 스위치 | - | [문서 링크]() | ⬜ |
-| 14 | Forward Proxy vs Reverse Proxy | - | [문서 링크]() | ⬜ |
+| 0 | 네트워크 전체 흐름 개요 | 최나현, 최승우 | [Day2](./Day2/) | ✅ 2회차 (11/6) |
+| 1 | OSI 7 계층 & TCP/IP 4 계층 모델 | 권혜강, 윤형섭, 조수연, 최나현, 최묘석, 최승우 | [Day1(1104)](./Day1%281104%29/) | ✅ 1회차 (11/4) |
+| 2 | TCP vs UDP 개념 및 특징 비교 (+ 포트 포워딩 · NAT) | 조수연, 권혜강 | [Day3](./Day3/) | ✅ 3회차 (11/10) |
+| 3 | TCP 3-way Handshake & 4-way Handshake | 조수연, 권혜강 | [Day3](./Day3/) | ✅ 3회차 (11/10) |
+| 4 | TCP 흐름 제어, 혼잡 제어, 오류 제어 | 조수연, 권혜강 | [Day3](./Day3/) | ✅ 3회차 (11/10) |
+| 5 | HTTP vs HTTPS & SSL/TLS 핸드셰이크 | 김영웅, 최나현, 최묘석, 최승우 | [Day4](./Day4/) | ✅ 4회차 (11/12) |
+| 6 | HTTP 버전별 진화 (HTTP 1.1 / 2.0 / 3.0 QUIC) | 김영웅, 조수연, 최묘석 | [Day5](./Day5/) | 🔜 5회차 (11/17) |
+| 7 | HTTP Status Code & HTTP Method (GET, POST 등) | - | - | ⬜ |
+| 8 | DNS 동작 원리 & 작동 과정 | - | - | ⬜ 6회차 예정 |
+| 9 | 웹 브라우저에 URL을 입력하면 일어나는 일 | - | - | ⬜ 6회차 예정 |
+| 10 | Cookie vs Session vs Web Storage (Local/Session) | - | - | ⬜ 7회차 예정 |
+| 11 | RESTful API 설계 원칙 및 특징 | - | - | ⬜ 8회차 예정 |
+| 12 | CORS (교차 출처 리소스 공유) 원리와 해결법 | - | - | ⬜ 8회차 예정 |
+| 13 | 로드 밸런서(Load Balancer)와 L4/L7 스위치 | - | - | ⬜ 8회차 예정 |
+| 14 | Forward Proxy vs Reverse Proxy | - | - | ⬜ |
 
 ---
 
 ## 📌 파일 생성 가이드
-- 이 폴더 안에 `[주제명]_[이름].md` 형식으로 파일을 추가해주세요.
+- 회차 폴더(`Day[N]/`) 안에 `[주제명]_[이름].md` 형식으로 파일을 추가해주세요.
   - 예: `TCP_UDP_홍길동.md`, `HTTP_HTTPS_이순신.md`
 - 발표 정리 마크다운 양식은 `Topics/template.md`를 복사하여 사용하시면 편리합니다.
