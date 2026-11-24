@@ -17,7 +17,7 @@
 > **운영 팁**:
 > - 총 7명이므로, **화요일 3명 / 목요일 4명** (혹은 매회 3\~4명씩 순환) 발표를 진행하면 1주에 7명 전원이 1회씩 발표를 완료할 수 있습니다.
 > - 아래 스케줄은 **자료구조(DS)**와 **네트워크(NW)**를 병행하여 학습하는 4주 완성 로드맵 예시입니다.
-> - 실제 진행에 맞춰 1\~6회차는 날짜와 장소로 표기했습니다. 7회차부터는 회고에서 확정합니다.
+> - 실제 진행에 맞춰 1\~6회차는 날짜와 장소로 표기했습니다. 11월 마지막 주(11/23 \~ 11/27)는 휴무이고, 7·8회차는 12월 첫째 주에 진행할 예정입니다.
 
 | 주차 | 회차 (날짜) | 발표 주제 (DS / NW) | 진행 현황 |
 | :---: | :---: | :--- | :---: |
@@ -26,34 +26,47 @@
 | **2주차** | **3회차 (11/10 화)**<br>18:30 · 투썸플레이스 | DS: Balanced Tree (AVL, Red-Black) (최묘석, 김영웅 발표)<br>NW: TCP vs UDP / TCP Handshake *(2회차에서 이월)*, TCP 제어 기법 (흐름/혼잡/오류), 포트 포워딩 (조수연, 권혜강 발표) | ✅ 완료 |
 | | **4회차 (11/12 목)**<br>SSAFY 건물 내부 / 각자 개인 공간 | DS: Heap & Priority Queue / Hash Table (권혜강, 윤형섭, 조수연 발표)<br>NW: HTTP vs HTTPS / SSL 핸드셰이크 (김영웅, 최나현, 최묘석, 최승우 발표) | ✅ 완료 |
 | **3주차** | **5회차 (11/17 화)**<br>19:00 · 최묘석 집 | DS: Graph 기본 & DFS / BFS (권혜강, 윤형섭, 최승우, 최나현 발표)<br>NW: HTTP 1.1 vs 2.0 vs 3.0 (김영웅, 조수연, 최묘석 발표) | ✅ 완료 |
-| | **6회차 (11/20 금)**<br>19:00 · 최묘석 집 | DS: 최단 경로 알고리즘 / MST (권혜강, 최나현, 김영웅 발표)<br>NW: DNS 동작 원리 / 브라우저 주소창 입력 시 흐름 (최묘석, 윤형섭, 최승우, 조수연 발표) | 🔜 예정 |
-| **4주차** | **7회차** | DS: Trie 자료구조<br>NW: Cookie vs Session vs Web Storage | ⬜ |
-| | **8회차** | DS: B-Tree & B+Tree<br>NW: REST API / CORS / Load Balancing | ⬜ |
+| | **6회차 (11/20 금)**<br>19:00 · 최묘석 집 | DS: 최단 경로 알고리즘 / MST (권혜강, 최나현, 김영웅 발표)<br>NW: DNS 동작 원리 / 브라우저 주소창 입력 시 흐름 (최묘석, 윤형섭, 최승우, 조수연 발표) | ✅ 완료 |
+| **4주차** | 11/23 \~ 11/27 | 🛌 **스터디 휴무** (11월 마지막 주) | - |
+| **5주차** | **7회차 (12월 첫째 주)**<br>날짜·장소 미정 | DS: Trie 자료구조<br>NW: Cookie vs Session vs Web Storage | 🔜 예정 |
+| | **8회차 (12월 첫째 주)**<br>날짜·장소 미정 | DS: B-Tree & B+Tree<br>NW: REST API / CORS / Load Balancing | 🔜 예정 |
 
 ---
 
-## 📌 6회차 (11/20) 진행 안내
+## 📌 7·8회차 (12월 첫째 주) 진행 안내
 
-> 📍 **11/20 (금) 19:00 · 최묘석 집**
+> 🛌 **11월 마지막 주(11/23 \~ 11/27)는 스터디 휴무입니다.**  
+> 📍 **7·8회차는 12월 첫째 주 예정** (날짜·장소·발표자는 확정되면 업데이트)  
+> 📝 6회차 회고: [Network/Day6/6회차회고.md](../Network/Day6/6회차회고.md)
 
-### 🗂️ DS: 최단 경로 알고리즘 / MST
-- **발표자**: 권혜강, 최나현, 김영웅
-- **범위**: Dijkstra(우선순위 큐, 음수 간선 불가) / Bellman-Ford(음수 간선, 음수 사이클 탐지) / Floyd-Warshall(모든 쌍), MST(Kruskal + Union-Find, Prim)
-- **발표 자료 제출**: 모임 시작 전까지 `DataStructure/Day6/` 폴더에 PR
-- 참고: [DataStructure-Curriculum](./DataStructure-Curriculum.md)
+### 🗂️ 7회차 DS: Trie
+- **발표자**: 미정
+- **범위**: Trie 구조(노드 = 글자), 삽입·검색 O(L), 접두사 검색·자동완성, 해시 테이블과 비교, 메모리 최적화(압축 Trie 등)
+- **발표 자료 제출**: 모임 시작 전까지 `DataStructure/Day7/` 폴더에 PR
 
-### 🌐 NW: DNS 동작 원리 / 브라우저에 URL 입력 시 흐름
-- **발표자**: 최묘석, 윤형섭, 최승우, 조수연
-- **범위**: DNS 조회 순서(캐시 → hosts → Local DNS → Root → TLD → Authoritative), 재귀·반복 쿼리, URL 입력부터 렌더링까지 전체 흐름
-- **발표 자료 제출**: 모임 시작 전까지 `Network/Day6/` 폴더에 PR
-- 참고: [Network-Curriculum](./Network-Curriculum.md)
+### 🌐 7회차 NW: Cookie vs Session vs Web Storage
+- **발표자**: 미정
+- **범위**: HTTP 무상태성, 쿠키 속성(HttpOnly, Secure, SameSite), 세션 저장 방식, LocalStorage vs SessionStorage, JWT 저장 위치와 보안
+- **발표 자료 제출**: 모임 시작 전까지 `Network/Day7/` 폴더에 PR
+
+### 🗂️ 8회차 DS: B-Tree & B+Tree
+- **발표자**: 미정
+- **범위**: 다진 균형 트리, 노드 분할·병합, B+Tree 리프 연결과 범위 검색, DB 인덱스에 쓰는 이유(디스크 I/O)
+- **발표 자료 제출**: 모임 시작 전까지 `DataStructure/Day8/` 폴더에 PR
+
+### 🌐 8회차 NW: REST API / CORS / Load Balancing
+- **발표자**: 미정
+- **범위**: REST 설계 원칙, CORS와 Preflight, L4 vs L7 로드밸런서와 분산 알고리즘
+- **발표 자료 제출**: 모임 시작 전까지 `Network/Day8/` 폴더에 PR
+
+참고: [DataStructure-Curriculum](./DataStructure-Curriculum.md) · [Network-Curriculum](./Network-Curriculum.md)
 
 ### 🙋 역할 분담
 
 | 역할 | 담당 | 내용 |
 | :---: | :---: | :--- |
-| **DS 발표** | 권혜강, 최나현, 김영웅 | 최단 경로 / MST 발표, 발표 내용 PR |
-| **NW 발표** | 최묘석, 윤형섭, 최승우, 조수연 | DNS / URL 입력 시 흐름 발표, 발표 내용 PR |
+| **일정 확정** | 전원 | 12월 첫째 주 중 7·8회차 날짜·장소 정하기 |
+| **DS / NW 발표** | 미정 | 회차별 주제 발표, 발표 내용 PR |
 | **서기** | 미정 | 모임 중 논의 / Q&A 기록 |
 | **청중 (질문·보충)** | 발표하지 않는 파트의 스터디원 | 발표를 듣고 꼬리 질문 및 보충 설명 |
 
